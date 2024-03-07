@@ -76,7 +76,7 @@ class RecommendedSongs extends StatelessWidget {
                   ),
                 ),
               onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> NowPlyg(img: _profilepic[index],)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> NowPlaying(img: _profilepic[index], songName: _names[index], artistName: _artist[index],)));
               },
               ),
             ))

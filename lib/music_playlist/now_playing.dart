@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 
-class NowPlyg extends StatelessWidget {
+class NowPlaying extends StatelessWidget {
   final String img;
-  const NowPlyg({super.key,required this.img});
+  final String songName;
+  final String artistName;
+  const NowPlaying({super.key,required this.img, required this.songName, required this.artistName});
 
   @override
   Widget build(BuildContext context) {
@@ -59,17 +61,17 @@ class NowPlyg extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const Text('Attention',
-              style: TextStyle(
+           Text(songName,
+              style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFFF2B1BE))),
           const SizedBox(
             height: 10,
           ),
-          const Text(
-            'Charlie Puth',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+           Text(
+            artistName,
+            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 30,
